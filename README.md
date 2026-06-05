@@ -29,8 +29,7 @@ The objective is to create a robust urban driving system capable of maintaining 
 ## 📽️ Demo
 
 ### Autodrive — Lane Following
-https://github.com/arnav-tripathi7/smart-vehicle/blob/main/media/demo_autodrive.mp4
-
+https://github.com/arnav-tripathi7/smart-vehicle/blob/main/media/demo_autodrive1.mp4
 ### Emergency Braking
 media/demo_emergency_brake.mp4
 
