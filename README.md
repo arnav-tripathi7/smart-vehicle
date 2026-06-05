@@ -145,8 +145,39 @@ System Architecture
 ---
 
 ## 🗂️ Repository Structure
-
-text smart-vehicle/ │ ├── assets/ │   └── speedometer.png │ ├── controllers/ │   ├── autonomous_vehicle/ │   │   ├── Makefile │   │   ├── autonomous_vehicle │   │   └── autonomous_vehicle.c │   │ │   └── smart_vehicle_controller/ │       └── smart_vehicle_controller.py │ ├── docs/ │   ├── emergency_braking_pipeline.png │   ├── lane_detection_pipeline.png │   └── system_architecture.png │ ├── media/ │   ├── demo_autodrive1.mp4 │   ├── demo_camera_view.gif │   ├── demo_emergency_brake.mp4 │   ├── demo_manual.mp4 │   └── demo_speedometer.gif │ ├── worlds/ │   └── city_traffic.wbt │ ├── .gitignore ├── LICENSE ├── README.md └── requirements.txt 
+smart-vehicle/
+│
+├── assets/
+│   └── speedometer.png
+│
+├── controllers/
+│   ├── autonomous_vehicle/
+│   │   ├── Makefile
+│   │   ├── autonomous_vehicle
+│   │   └── autonomous_vehicle.c
+│   │
+│   └── smart_vehicle_controller/
+│       └── smart_vehicle_controller.py
+│
+├── docs/
+│   ├── emergency_braking_pipeline.png
+│   ├── lane_detection_pipeline.png
+│   └── system_architecture.png
+│
+├── media/
+│   ├── demo_autodrive1.mp4
+│   ├── demo_camera_view.gif
+│   ├── demo_emergency_brake.mp4
+│   ├── demo_manual.mp4
+│   └── demo_speedometer.gif
+│
+├── worlds/
+│   └── city_traffic.wbt
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
 
 ---
 
@@ -225,7 +256,14 @@ text smart_vehicle_controller
 
 Recommended configuration:
 
-text Lidar {   translation           2.0 0.5 0   maxRange              50   numberOfLayers        1   horizontalResolution  512   fieldOfView           1.57   near                  0.01 } 
+Lidar {
+  translation           2.0 0.5 0
+  maxRange              50
+  numberOfLayers        1
+  horizontalResolution  512
+  fieldOfView           1.57
+  near                  0.01
+}
 
 > The LiDAR should be positioned outside the vehicle chassis to prevent self-occlusion.
 
@@ -236,9 +274,28 @@ text Lidar {   translation           2.0 0.5 0   maxRange              50   numb
 Lane Detection Pipeline
 
 ### Processing Flow
-
-text Camera Frame       │       ▼ Yellow Pixel Detection       │       ▼ Centroid Computation       │       ▼ Moving Average Filter       │       ▼ PID Controller       │       ▼ Speed-Adaptive Damping       │       ▼ Steering Ramp       │       ▼ Vehicle Steering Command 
-
+Camera Frame
+      │
+      ▼
+Yellow Pixel Detection
+      │
+      ▼
+Centroid Computation
+      │
+      ▼
+Moving Average Filter
+      │
+      ▼
+PID Controller
+      │
+      ▼
+Speed-Adaptive Damping
+      │
+      ▼
+Steering Ramp
+      │
+      ▼
+Vehicle Steering Command
 ---
 
 ## 🛑 Emergency Braking Pipeline
@@ -246,8 +303,26 @@ text Camera Frame       │       ▼ Yellow Pixel Detection       │       ▼
 Emergency Braking Pipeline
 
 ### Processing Flow
-
-text LiDAR Scan       │       ▼ Closest Obstacle Distance       │       ▼ TTC Computation       │       ▼ Emergency?  ┌────┴────┐  │         │ Yes       No  │         │  ▼         ▼ Full      Caution Brake     Slowdown  │         │  ▼         ▼ Vehicle Safety Response 
+LiDAR Scan
+      │
+      ▼
+Closest Obstacle Distance
+      │
+      ▼
+TTC Computation
+      │
+      ▼
+Emergency?
+ ┌────┴────┐
+ │         │
+Yes       No
+ │         │
+ ▼         ▼
+Full      Caution
+Brake     Slowdown
+ │         │
+ ▼         ▼
+Vehicle Safety Response
 
 ---
 
