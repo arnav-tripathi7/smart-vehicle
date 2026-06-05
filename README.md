@@ -30,17 +30,18 @@ The objective is to create a robust urban driving system capable of maintaining 
 
 ### Autodrive — Lane Following
 https://github.com/arnav-tripathi7/smart-vehicle/blob/main/media/demo_autodrive1.mp4
+
 ### Emergency Braking
-media/demo_emergency_brake.mp4
+https://github.com/arnav-tripathi7/smart-vehicle/blob/main/media/demo_emergency_brake.mp4
 
 ### Manual Drive — Gear Switching
-media/demo_manual.mp4
+https://github.com/arnav-tripathi7/smart-vehicle/blob/main/media/demo_manual.mp4
 
 ### Live Speedometer
-Speedometer
+https://github.com/arnav-tripathi7/smart-vehicle/blob/main/media/demo_speedometer.gif
 
 ### Onboard Camera Feed — Lane Detection
-Camera Feed
+https://github.com/arnav-tripathi7/smart-vehicle/blob/main/media/demo_camera_view.gif
 
 ---
 
