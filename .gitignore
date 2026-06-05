@@ -1,16 +1,11 @@
-# Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+*.pyo
+*.pyd
 
-# OS-specific files
-.DS_Store
-Thumbs.db
-
-# IDE and Environment folders
 .vscode/
 .idea/
-.venv/
-env/
-venv/
-ENV/
+
+.DS_Store
+
+*.log
